@@ -117,13 +117,13 @@ header nav{
 .shortStories{
     grid-column: 1/6;
     background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(4px);
     color: #f5f5f5;
     border-radius: 10px;
     padding: 30px;
     width: 80%;
     margin: 20px auto;
     text-align: center;
-    backdrop-filter: blur(4px);
     font-size: 18px;
     height: 300px;
 }
@@ -142,13 +142,13 @@ header nav{
     height: 300px;
 }
 
-/* Segunda parte de la pagina */
+/*second section */
 .bodyBackground{
     background-image: url(/images/homeBack2.jpg);
     height: 100hv;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100vh; /* Solo muestra el 60% de la altura */
+    background-size: 100% 100vh;
     background-position: top;
     filter: brightness(0.9) contrast(1.1) saturate(1.2); 
     margin-top: -70px;
@@ -165,9 +165,9 @@ header nav{
 }
 
 .writerContainer {
-    flex: 3;
     color: #f5f5dc;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(4px);
     padding: 30px;
     border-radius: 10px;  
     position: relative;
@@ -206,7 +206,8 @@ header nav{
     flex-direction: column;
     justify-content: flex-start;
     gap: 12px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(4px);
     width: 320px;
     padding: 40px;
     border-radius: 10px;
@@ -253,6 +254,126 @@ header nav{
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/*Authors Biography section 1*/
+.poetLayout {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 30px;
+  padding: 60px;
+  color: #f5f5dc;
+}
+
+.poetSelector {
+    grid-column: 1/2;
+    min-width: 280px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.poetList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.poetList button {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    background: transparent;
+    color: #f5f5dc;
+    border: 1px solid #f5f5dc;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 320px;
+}
+
+.poetList button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    letter-spacing: 1px;
+}
+
+.galleryIntro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+/*Authors Biography section 2*/
+.poetContent{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 55%  45%;
+    gap: 10px;
+}
+
+.poetHeader {
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#poetImage {
+    grid-row: 1/2;
+    width: 160px;
+    height: auto;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    border: 3px solid #f5f5dc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#poetName {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#poetBiography {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.poetWorks{
+    grid-row: 2/3;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.poetWorks h4 {
+    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 12px;
+}
+
+#poetWorksList {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+#poetWorksList li {
+    margin-bottom: 6px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
 }
 
 
