@@ -24,9 +24,9 @@
                 <h2>Where every word whispers from the soul</p>
                 <div class="scrollPage">
                     <a href="" id="active">Inicio</a>
-                    <a href="">Love Poems</a>
-                    <a href="">Collection</a>
-                    <a href="">About Authors</a>
+                    <a href="#poetGallery">Gallery</a>
+                    <a href="#poetryGameSection">Game</a>
+                    <a href="#poetrySubmitLayout">Submit Verse</a>
                 </div>
             </div>
             <div class="shortStories">
@@ -121,38 +121,55 @@
                 </div>
             </section>
 
-
-
-
-
-
-            <div class="shortQuiz">
-                <!-- Quiz Section -->
-                <section class="quizSection">
-                <h2>Who Said It?</h2>
-                <div class="quizCard">
-                    <p id="quoteText" class="quote">“To be, or not to be: that is the question.”</p>
-                    
-                    <div class="options">
-                    <button class="quizOption" onclick="checkAnswer(this)">William Shakespeare</button>
-                    <button class="quizOption" onclick="checkAnswer(this)">Jane Austen</button>
-                    <button class="quizOption" onclick="checkAnswer(this)">Mark Twain</button>
-                    <button class="quizOption" onclick="checkAnswer(this)">Virginia Woolf</button>
-                    </div>
-
-                    <p id="feedback" class="feedback"></p>
-
-                    <div class="quizControls">
-                    <button onclick="loadNextQuestion()">Next Quote</button>
-                    </div>
+            <section id="poetryGameSection" class="poetryGameLayout">
+                <h2 class="gameTitle">Complete the Verse</h2>
+                <div id="gameContainer" class="gameBox">
+                    <p id="gamePrompt" class="gamePromptText"></p>
+                    <div id="gameOptions" class="gameOptionsGroup"></div>
+                    <p id="gameFeedback" class="gameFeedback hidden"></p>
+                    <p id="gameAuthor" class="gameAuthor hidden"></p>
+                    <button id="nextPromptBtn" class="nextButton hidden">Next Verse</button>
                 </div>
-                </section>
+            </section>
+            <div class="poetrySubmitLayout" id="poetrySubmitLayout">
+                <h2 class="formTitle">Share Your Own Verse</h2>
+                <p class="formIntro">
+                    Have you written lines that capture your heart, echo a moment, or challenge the silence?  
+                    We'd love to read what you’ve crafted — your poem might be featured in our gallery of voices.
+                </p>
+
+                <form id="userPoetryForm" class="formContainer">
+                    <label for="userFullName">Full Name</label>
+                    <input type="text" id="userFullName" name="userFullName" required placeholder="Your full name">
+
+                    <label for="userCountry">Country</label>
+                    <input type="text" id="userCountry" name="userCountry" required placeholder="Country of residence">
+
+                    <label for="userEmail">Email Address</label>
+                    <input type="email" id="userEmail" name="userEmail" required placeholder="you@example.com">
+
+                    <label for="userPoem">Your Poem</label>
+                    <textarea id="userPoem" name="userPoem" rows="6" required placeholder="Share up to 10 lines of your original writing..."></textarea>
+
+                    <button type="submit" class="formSubmitButton">Submit My Verses</button>
+                </form>
             </div>
-        </main>
-    </div> 
-    <footer>
-        &copy; 2025 Creative Journeys. All rights reserved.
-    </footer>
+            <footer class="poetryFooter">
+                <div class="footerInner">
+                    <p class="footerText">
+                    This project celebrates poetry’s timeless ability to connect hearts, challenge minds, and illuminate the human experience.
+                    </p>
+                    <ul class="footerNav">
+                        <li><a href="#poetGallery">Gallery</a></li>
+                        <li><a href="#poetryGameSection">Game</a></li>
+                        <li><a href="#poetrySubmitForm">Submit Verse</a></li>
+                    </ul>
+                    <p class="footerCredit">Created with care & creativity © Daniel · 2025</p>
+                </div>
+            </footer>
+        </div>
+    </main>
+    
     <script>
         const authors = {
             shakespeare: {
@@ -453,7 +470,120 @@
             });
             }
 
-    
+        const poetryGame = [
+            {
+                prompt: "Because I could not stop for ____",
+                options: ["Death", "Life", "Hope", "Time"],
+                answer: "Death",
+                author: "Emily Dickinson"
+            },
+            {
+                prompt: "Shall I compare thee to a ____ day?",
+                options: ["Summer", "Golden", "Spring", "Lovely"],
+                answer: "Summer",
+                author: "William Shakespeare"
+            },
+            {
+                prompt: "I, too, sing ____",
+                options: ["Freedom", "America", "Justice", "Hope"],
+                answer: "America",
+                author: "Langston Hughes"
+            },
+            {
+                prompt: "Love is so short, forgetting is so ____",
+                options: ["Slow", "Long", "Hard", "Deep"],
+                answer: "Long",
+                author: "Pablo Neruda"
+            },
+            {
+                prompt: "It is not true that people stop pursuing ____",
+                options: ["Dreams", "Power", "Desire", "Happiness"],
+                answer: "Dreams",
+                author: "Gabriel García Márquez"
+            },
+            {
+                prompt: "There is no greater agony than bearing an untold ____ inside you.",
+                options: ["Story", "Secret", "Dream", "Truth"],
+                answer: "Story",
+                author: "Not in your current list (Maya Angelou, optional)"
+            },
+            {
+                prompt: "Hope is the thing with ____",
+                options: ["Wings", "Feathers", "Light", "Words"],
+                answer: "Feathers",
+                author: "Emily Dickinson"
+            },
+            {
+                prompt: "A room of one’s ____",
+                options: ["Choice", "Dreams", "Hope", "Own"],
+                answer: "Own",
+                author: "Virginia Woolf"
+            },
+            {
+                prompt: "The world was so recent that many things lacked ____",
+                options: ["Color", "Names", "Weight", "Shape"],
+                answer: "Names",
+                author: "Gabriel García Márquez"
+            },
+            {
+                prompt: "All animals are equal, but some animals are more ____ than others.",
+                options: ["Free", "Important", "Equal", "Clever"],
+                answer: "Equal",
+                author: "Also not in your main list (George Orwell)"
+            }
+            ];
+
+            let currentIndex = 0;
+
+            function loadPrompt() {
+            const current = poetryGame[currentIndex];
+            document.getElementById("gamePrompt").textContent = current.prompt;
+            const optionsGroup = document.getElementById("gameOptions");
+            optionsGroup.innerHTML = "";
+
+            current.options.forEach(option => {
+                const button = document.createElement("button");
+                button.className = "optionButton";
+                button.textContent = option;
+                button.onclick = () => checkAnswer(option, current.answer, current.author);
+                optionsGroup.appendChild(button);
+            });
+
+            document.getElementById("gameFeedback").classList.add("hidden");
+            document.getElementById("gameAuthor").classList.add("hidden");
+            document.getElementById("nextPromptBtn").classList.add("hidden");
+            }
+
+            function checkAnswer(selected, correct, author) {
+            const feedback = document.getElementById("gameFeedback");
+            const authorInfo = document.getElementById("gameAuthor");
+
+            if (selected === correct) {
+                feedback.textContent = "✅ Correct!";
+            } else {
+                feedback.textContent = `❌ Not quite. The correct word was "${correct}".`;
+            }
+
+            authorInfo.textContent = `— ${author}`;
+            feedback.classList.remove("hidden");
+            authorInfo.classList.remove("hidden");
+            document.getElementById("nextPromptBtn").classList.remove("hidden");
+            }
+
+            document.getElementById("nextPromptBtn").onclick = () => {
+            currentIndex++;
+            if (currentIndex < poetryGame.length) {
+                loadPrompt();
+            } else {
+                document.getElementById("gameContainer").innerHTML = `
+                <h3 class="gameEnd">You've completed all verses!</h3>
+                <p class="gameEndNote">Let poetry live in your memory, line by line.</p>
+                `;
+            }
+            };
+
+            loadPrompt();
+
         </script>
 </body>
 </html>
