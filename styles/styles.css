@@ -2,7 +2,7 @@ body{
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
-    background-color: aliceblue;
+    
 }
 
 header{
@@ -140,6 +140,118 @@ header nav{
     backdrop-filter: blur(4px);
     font-size: 18px;
     height: 300px;
+}
+
+/* Segunda parte de la pagina */
+.bodyBackground{
+    background-image: url(/images/homeBack2.jpg);
+    height: 100hv;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100vh; /* Solo muestra el 60% de la altura */
+    background-position: top;
+    filter: brightness(0.9) contrast(1.1) saturate(1.2); 
+    margin-top: -70px;
+}
+
+/* Authors selector and content */
+.writerLayout {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: space-between;
+    gap: 70px;
+    padding: 40px;
+  
+}
+
+.writerContainer {
+    flex: 3;
+    color: #f5f5dc;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 10px;  
+    position: relative;
+}
+
+.writerContainer h1{
+    color: #BFA76F;
+    font-style: normal;
+    font-size: 30px;
+    margin: 0;
+}
+
+.writerContainer h2{
+    color: #BFA76F;
+    font-style: italic;
+    font-size: 20px;
+    margin-top: -1px
+}
+
+.writerContainer h3{
+    font-style: italic;
+    font-size: 25px;
+}
+
+.writerContainer ul{
+    width: 560px;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    margin-top: -20px;
+}
+
+.authorSelector {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 320px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.authorSelector button:hover {
+    letter-spacing: 1px;
+    color: #f5f5dc;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+
+#authorImage{
+    width: 120px;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+}
+
+.authorSelector button {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #f5f5dc;
+    border: 1px solid #f5f5dc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#authorQuotes li {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 0.5s ease forwards;
+}
+
+#authorQuotes li:nth-child(1) { animation-delay: 0.2s; }
+#authorQuotes li:nth-child(2) { animation-delay: 0.3s; }
+#authorQuotes li:nth-child(3) { animation-delay: 0.4s; }
+#authorQuotes li:nth-child(4) { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
