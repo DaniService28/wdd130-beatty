@@ -116,7 +116,7 @@ header nav{
 
 .shortStories{
     grid-column: 1/6;
-    background-color: rgba(0, 0, 0, 0.5); /* semitransparente */
+    background-color: rgba(0, 0, 0, 0.5); 
     color: #f5f5f5;
     border-radius: 10px;
     padding: 30px;
@@ -130,7 +130,7 @@ header nav{
 
 .poemsSection{
     grid-column: 6/-1;
-    background-color: rgba(0, 0, 0, 0.5); /* semitransparente */
+    background-color: rgba(0, 0, 0, 0.5); 
     color: #f5f5f5;
     border-radius: 10px;
     padding: 30px;
@@ -167,7 +167,7 @@ header nav{
 .writerContainer {
     flex: 3;
     color: #f5f5dc;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 30px;
     border-radius: 10px;  
     position: relative;
@@ -175,8 +175,9 @@ header nav{
 
 .writerContainer h1{
     color: #BFA76F;
+    font-family: serif;
     font-style: normal;
-    font-size: 30px;
+    font-size: 33px;
     margin: 0;
 }
 
@@ -205,7 +206,7 @@ header nav{
     flex-direction: column;
     justify-content: flex-start;
     gap: 12px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 320px;
     padding: 40px;
     border-radius: 10px;
