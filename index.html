@@ -75,19 +75,15 @@
                             <button onclick="loadAuthor('woolf')">Virginia Woolf</button>
                             <button onclick="loadAuthor('borges')">Jorge Luis Borges</button>
                         </aside>
-                    </section>
-                    
+                    </section>        
             </div>
-            
+            <h1 id="famousPoetryHeader">Ten Names That Breathe Poetry</h1>
             <section id="poetGallery" class="poetLayout">
                 <!-- IZQUIERDA: Lista de poetas -->
                 <aside class="poetSelector">
-                    <h4 class="galleryIntro">
-                    Throughout history, poetry has given voice to the deepest human emotions — 
-                    from love and longing to protest and wonder. 
-                    The following poets have shaped our literary heritage, 
-                    each leaving behind verses that still echo in the hearts of readers.
-                    </h4>
+                    <p class="galleryIntro">
+                    Poetry has long expressed the deepest human emotions — from love and longing to protest and awe. These poets have shaped our literary heritage, leaving behind verses that continue to resonate across generations.
+                    </p>
                     <ul class="poetList">
                     <li><button onclick="loadPoet('shakespeare')">William Shakespeare</button></li>
                     <li><button onclick="loadPoet('marquez')">Gabriel García Márquez</button></li>
@@ -272,7 +268,7 @@
             name: "Gabriel García Márquez",
             biography:
                 "Gabriel García Márquez (1927–2014) was a Colombian novelist, journalist, and Nobel laureate, celebrated for pioneering magical realism. Born in Aracataca, he was raised by his grandparents, whose storytelling deeply influenced his style. He began his career as a journalist and published his first novella, 'Leaf Storm', in 1955. His breakthrough came with 'One Hundred Years of Solitude' (1967), a multigenerational saga set in the fictional town of Macondo, which sold over 50 million copies. He won the Nobel Prize in Literature in 1982. His works explore themes of solitude, memory, and Latin American identity, blending the fantastical with the political. He passed away in Mexico City at age 87.",
-            image: "img/marquez.jpg",
+            image: "images/garciaPorta.jpg",
             works: [
                 "One Hundred Years of Solitude (1967)",
                 "Leaf Storm (1955)",
@@ -291,7 +287,7 @@
             name: "Jane Austen",
             biography:
                 "Jane Austen (1775–1817) was an English novelist known for her keen social commentary and romantic wit. Born in Steventon, Hampshire, she began writing as a teenager and published her first novel, 'Sense and Sensibility', in 1811. Her most famous work, 'Pride and Prejudice' (1813), remains a cornerstone of English literature. Though her novels were published anonymously during her lifetime, she gained posthumous recognition for her sharp observations of class, gender, and courtship. Her writing blends irony, realism, and strong female protagonists. Austen died at age 41 in Winchester, leaving behind six completed novels that continue to inspire adaptations and scholarship.",
-            image: "img/austen.jpg",
+            image: "images/jane-austenPorta.jpg",
             works: [
                 "Sense and Sensibility (1811)",
                 "Pride and Prejudice (1813)",
@@ -309,7 +305,7 @@
             name: "Mark Twain",
             biography:
                 "Mark Twain (1835–1910), born Samuel Langhorne Clemens, was an American writer, humorist, and lecturer, widely considered the father of American literature. He was born on November 30, 1835, in Florida, Missouri, and grew up in Hannibal, a town on the Mississippi River that inspired the settings of many of his stories. Twain began his career as a printer and riverboat pilot before turning to journalism and fiction. His first major success came with the short story 'The Celebrated Jumping Frog of Calaveras County' (1865). He gained international fame with 'The Adventures of Tom Sawyer' (1876) and its sequel, 'Adventures of Huckleberry Finn' (1884), often called the Great American Novel. Twain’s writing combined satire, social criticism, and vivid storytelling, often drawing from his own experiences. He died on April 21, 1910, in Redding, Connecticut, shortly after the return of Halley's Comet, which he had famously predicted would mark both his birth and death.",
-            image: "img/twain.jpg",
+            image: "images/twainPorta.jpg",
             works: [
                 "The Adventures of Tom Sawyer (1876)",
                 "Adventures of Huckleberry Finn (1884)",
@@ -328,7 +324,7 @@
             name: "Virginia Woolf",
             biography:
                 "Virginia Woolf (1882–1941) was an English novelist, essayist, and pioneer of literary modernism. Born Adeline Virginia Stephen in London on January 25, 1882, she was educated at home and later attended King’s College London. Her first novel, 'The Voyage Out' (1915), introduced her experimental style. Woolf became a central figure in the Bloomsbury Group and co-founded the Hogarth Press with her husband Leonard Woolf in 1917. Her most famous works, including 'Mrs Dalloway' (1925) and 'To the Lighthouse' (1927), revolutionized narrative form through stream-of-consciousness and psychological depth. She also wrote influential feminist essays such as 'A Room of One’s Own' (1929). Woolf struggled with mental illness throughout her life and died by suicide on March 28, 1941, near Rodmell, Sussex. Her legacy endures as one of the most important voices in 20th-century literature.",
-            image: "img/woolf.jpg",
+            image: "images/woolfPorta.jpg",
             works: [
                 "Mrs Dalloway (1925)",
                 "To the Lighthouse (1927)",
@@ -346,7 +342,7 @@
                 name: "Jorge Luis Borges",
                 biography:
                     "Jorge Luis Borges (1899–1986) was an Argentine writer, poet, and philosopher, renowned for his intricate short stories and essays that explore themes of infinity, labyrinths, mirrors, and time. Born in Buenos Aires on August 24, 1899, he was raised in a bilingual household and began publishing poetry in his early twenties. His first book, 'Fervor de Buenos Aires' (1923), marked the beginning of a prolific literary career. Borges gained international recognition with 'Ficciones' (1944) and 'El Aleph' (1949), collections that revolutionized narrative form and philosophical fiction. He became director of the National Library of Argentina in 1955 and was blind by age 55, a condition that deepened his symbolic imagination. Though nominated for the Nobel Prize multiple times, he never received it. Borges died in Geneva on June 14, 1986, leaving behind a legacy that continues to shape global literature.",
-                image: "img/borges.jpg",
+                image: "images/borgesPorta.jpg",
                 works: [
                     "Fervor de Buenos Aires (1923)",
                     "Inquisiciones (1925)",
@@ -365,7 +361,7 @@
                 name: "Pablo Neruda",
                 biography:
                     "Pablo Neruda (1904–1973), born Ricardo Eliécer Neftalí Reyes Basoalto, was a Chilean poet, diplomat, and Nobel laureate whose passionate and politically charged poetry made him one of the most influential voices of the 20th century. He was born in Parral, Chile, on July 12, 1904, and published his first poems as a teenager under the pseudonym Pablo Neruda. His early success came with 'Twenty Love Poems and a Song of Despair' (1924), followed by surrealist and socially conscious works like 'Residence on Earth'. Neruda served in diplomatic posts across Asia and Europe, and his political activism led to exile during Chile’s anti-communist crackdown. His magnum opus, 'Canto General' (1950), is an epic tribute to Latin America’s history and people. He won the Nobel Prize in Literature in 1971. Neruda died in Santiago on September 23, 1973, just days after the military coup that ousted President Allende.",
-                image: "img/neruda.jpg",
+                image: "images/nerudaPorta.jpg",
                 works: [
                     "Crepusculario (1923)",
                     "Twenty Love Poems and a Song of Despair (1924)",
@@ -383,7 +379,7 @@
                 name: "Emily Dickinson",
                 biography:
                     "Emily Dickinson (1830–1886) was an American poet whose introspective and enigmatic verse reshaped the landscape of modern poetry. Born in Amherst, Massachusetts, she lived most of her life in seclusion, writing nearly 1,800 poems that were largely unpublished during her lifetime. Her first known poem dates to the early 1850s, and her work is characterized by short lines, slant rhyme, and unconventional punctuation. Dickinson’s themes often explored death, immortality, nature, and the inner workings of the soul. Her most famous poem, 'Because I could not stop for Death,' was published posthumously. After her death in 1886, her sister Lavinia discovered her handwritten fascicles, leading to the first published collection in 1890. Today, Dickinson is considered one of the most important voices in American literature.",
-                image: "img/dickinson.jpg",
+                image: "images/dickinsonPorta.jpg",
                 works: [
                     "Because I could not stop for Death",
                     "Hope is the thing with feathers",
@@ -402,7 +398,7 @@
                 name: "Octavio Paz",
                 biography:
                     "Octavio Paz (1914–1998) was a Mexican poet, essayist, and diplomat, widely regarded as one of Latin America's greatest literary figures. Born in Mexico City, he published his first poems in the early 1930s and gained international acclaim with 'The Labyrinth of Solitude' (1950), a profound exploration of Mexican identity. His poetic style evolved through surrealism, existentialism, and Eastern philosophy, often blending eroticism, mysticism, and political reflection. Paz served as Mexico’s ambassador to India, where Hindu and Buddhist thought deeply influenced his work. He won the Nobel Prize in Literature in 1990. His first major work was 'Luna Silvestre' (1933), and his most famous poem is 'Piedra de sol' (1957), a lyrical meditation on time and desire. Paz’s legacy lives on through his essays, poetry, and cultural criticism.",
-                image: "img/paz.jpg",
+                image: "images/pazPorta.jpg",
                 works: [
                     "Luna Silvestre (1933)",
                     "Entre la piedra y la flor (1941)",
@@ -421,7 +417,7 @@
                 name: "Langston Hughes",
                 biography:
                     "Langston Hughes (1901–1967) was an American poet, novelist, and playwright, and a central figure in the Harlem Renaissance. Born in Joplin, Missouri, he published his first poem, 'The Negro Speaks of Rivers,' in 1921, and his first book, 'The Weary Blues,' in 1926. Hughes’s work celebrated Black identity, culture, and resilience, often incorporating the rhythms of jazz and blues. He was one of the first to write poetry that spoke directly to the everyday lives of African Americans. His most famous poem, 'Harlem' (also known as 'A Dream Deferred'), became a defining voice of civil rights-era literature. Hughes also wrote short stories, essays, and plays, and created the beloved character Jesse B. Semple ('Simple') in his newspaper columns. He died in New York City in 1967, leaving behind a legacy of lyrical activism and cultural pride.",
-                image: "img/hughes.jpg",
+                image: "images/hughesPorta.jpg",
                 works: [
                     "The Negro Speaks of Rivers (1921)",
                     "The Weary Blues (1926)",
