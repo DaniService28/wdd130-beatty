@@ -50,12 +50,11 @@
         </div>
         <div class="bodyBackground">
             <div class="famousQuotes">
-                
                     <section id="authorShowcase" class="writerLayout">
                         <div id="writerContainer" class="writerContainer">
                             <img id="authorImage" src="img/shakespeare.jpg" alt="Author portrait">
-                            <h1>Words that Endure</h2>
-                            <h2 id="authorIntro">Master of theatre and eternal metaphor.</h3>
+                            <h1>Words that Endure</h1>
+                            <h2 id="authorIntro">Master of theatre and eternal metaphor.</h2>
                             <div class="writerPresentation">
                             <h3 id="authorName">William Shakespeare</h3>
                             <ul id="authorQuotes">
@@ -77,9 +76,9 @@
                         </aside>
                     </section>        
             </div>
+
             <h1 id="famousPoetryHeader">Ten Names That Breathe Poetry</h1>
             <section id="poetGallery" class="poetLayout">
-                <!-- IZQUIERDA: Lista de poetas -->
                 <aside class="poetSelector">
                     <p class="galleryIntro">
                     Poetry has long expressed the deepest human emotions — from love and longing to protest and awe. These poets have shaped our literary heritage, leaving behind verses that continue to resonate across generations.
@@ -238,8 +237,9 @@
                 "Being with you and not being with you is the only way I have to measure time."
                 ]
             }
-            };
+        };
 
+        
             function loadAuthor(key) {
             const author = authors[key];
 
@@ -260,7 +260,12 @@
             });
 
             
-            }
+        }
+        window.addEventListener("DOMContentLoaded", () => {
+            loadAuthor('shakespeare');
+            document.querySelector("button[onclick*='shakespeare']").classList.add("active");
+        });
+
         
         const poets = {
             shakespeare: {
@@ -462,13 +467,24 @@
 
             // Actualiza obras
             const worksList = document.getElementById("poetWorksList");
-            worksList.innerHTML = ""; // Limpiar contenido previo
+            worksList.innerHTML = ""; 
             poet.works.forEach((title) => {
                 const li = document.createElement("li");
                 li.textContent = title;
                 worksList.appendChild(li);
             });
-            }
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            loadPoet('shakespeare');
+
+            
+            const buttons = document.querySelectorAll(".poetList button");
+            buttons.forEach(btn => btn.classList.remove("active"));
+            const shakespeareBtn = document.querySelector("button[onclick*='shakespeare']");
+            if (shakespeareBtn) shakespeareBtn.classList.add("active");
+        });
+
 
         const poetryGame = [
             {

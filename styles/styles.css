@@ -126,6 +126,7 @@ header nav{
     text-align: center;
     font-size: 18px;
     height: 300px;
+    transition: transform 0.3s ease;
 }
 
 .poemsSection{
@@ -140,6 +141,11 @@ header nav{
     backdrop-filter: blur(4px);
     font-size: 18px;
     height: 300px;
+    transition: transform 0.3s ease;
+}
+
+.shortStories:hover, .poemsSection:hover{
+    transform: scale(1.05);
 }
 
 /*second section */
@@ -226,6 +232,10 @@ header nav{
     position: absolute;
     bottom: 2%;
     right: 2%;
+    transform: translateY(10px);
+    animation: fadeUp 0.5s ease forwards;
+    animation-delay: 0.1s;
+
 }
 
 .authorSelector button {
@@ -244,16 +254,28 @@ header nav{
     animation: fadeUp 0.5s ease forwards;
 }
 
+.authorSelector button.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid #f5f5dc;
+}
+
+
 #authorQuotes li:nth-child(1) { animation-delay: 0.2s; }
 #authorQuotes li:nth-child(2) { animation-delay: 0.3s; }
 #authorQuotes li:nth-child(3) { animation-delay: 0.4s; }
 #authorQuotes li:nth-child(4) { animation-delay: 0.5s; }
+#authorQuotes #authorImage {animation-delay: 0.3s; }
 
 @keyframes fadeUp {
+      from {
+    opacity: 0;
+    transform: translateY(10px);
+    }
     to {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 #famousPoetryHeader{
@@ -320,6 +342,14 @@ header nav{
     line-height: 1.2;
     width: 380px;
 }
+
+.poetList button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid #f5f5dc;
+  color: #f5f5dc;
+  transition: 0.3s ease;
+}
+
 
 /*Authors Biography section 2*/
 .poetContent{
