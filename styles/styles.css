@@ -51,7 +51,7 @@ header nav{
 
 .heroBackground{
     transform: translateY(-48px);
-    background-image: url(images/homeBack2.jpg);
+    background-image: url(../images/homeBack2.jpg);
     height: 160vh;
     background-size: cover;         
     background-attachment: fit;
@@ -150,7 +150,7 @@ header nav{
 
 /*second section */
 .bodyBackground{
-    background-image: url(images/homeBack2.jpg);
+    background-image: url(../images/homeBack2.jpg);
     height: 100hv;
     background-repeat: no-repeat;
     background-attachment: fixed;
