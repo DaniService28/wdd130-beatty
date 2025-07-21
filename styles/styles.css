@@ -646,3 +646,28 @@ header nav{
     font-size: 0.9rem;
     opacity: 0.8;
 }
+/* Short Stories Page Styles */
+.story-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+  
+  .story-item h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  button {
+    background-color: #49D49D;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #558564;
+  }
+  
